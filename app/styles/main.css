@@ -1,0 +1,459 @@
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+    padding-bottom: 20px;
+    font-size: 11px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+    margin-top: 0px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+
+/* Custom page footer */
+.footer {
+/*    position:absolute;
+    bottom:0;*/
+}
+
+
+/*OLD STYLE - change it */
+.Go_up{
+    width:20px;
+    height:20px;
+    margin-left:850px;
+    margin-top:40px;
+    margin-bottom:-60px;
+}
+
+.Go_up h4 a{
+    float: right;
+    margin-right: -100px;
+    color:black;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 0.7em;
+    transition: all ease-out 500ms;
+    -webkit-transition: all ease-out 500ms;
+    -moz-transition: all ease-out 500ms;
+    -ms-transition: all ease-out 500ms;
+    -o-transition: all ease-out 500ms;
+}
+
+.Go_up h4 a:hover{
+    color:#999;
+}
+
+/*
+* @section Layout
+* =header
+*/
+
+header{
+    background-color: #d4dfe3;
+    overflow: hidden;
+}
+
+header h1 a{
+    background: url('../images/logo1.png') top left no-repeat;
+    text-indent: -9999px;
+    cursor: pointer;
+    width: 248px;
+    height: 90px;
+    margin-top: 30px;
+    margin-left: 20px;
+    float: left;
+    transition: all ease-out 600ms;
+    -webkit-transition: all ease-out 600ms;
+    -moz-transition: all ease-out 600ms;
+    -ms-transition: all ease-out 600ms;
+    -o-transition: all ease-out 600ms;
+}
+
+header h1 a:hover{
+    background: url('../images/logo2.png') top left no-repeat;
+    text-indent: -9999px;
+    cursor: pointer;
+    width: 248px;
+    height: 90px;
+    margin-top: 30px;
+    margin-left: 20px;
+    float: left;
+}
+
+#menu{
+    float: right;
+    margin-top: 82px;
+    margin-right:20px;
+}
+
+#menu .item {
+    display: inline;
+}
+
+#menu .item a {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.4em;
+    color: black;
+    /*margin-right:25px;*/
+    transition: all ease-out 500ms;
+    -webkit-transition: all ease-out 500ms;
+    -moz-transition: all ease-out 500ms;
+    -ms-transition: all ease-out 500ms;
+    -o-transition: all ease-out 500ms;
+}
+
+
+#menu .item a:hover {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.4em;
+    color: #999;
+}
+
+#menu .item:after {
+    content: '|';
+    padding: 0 10px;
+}
+
+#menu .item:last-child:after{
+    content: '';
+}
+
+.back-content{
+    background-color: #d4dfe3;
+    width: 100%;
+    height: 694px;
+}
+
+#slide1{
+    width: 100%;
+    height: 694px;
+    float:left;
+    background: url('../images/robo1.png') 677px 60px no-repeat,
+                 url('../images/sombra.png') 705px 510px no-repeat,
+                 url('../images/robo2.png') 432px 220px no-repeat,
+                 url('../images/zero_one.png') 146px 50px no-repeat;
+}
+
+#slide1 h2{
+    margin-top: 130px;
+    margin-left: 20px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 6em;
+    text-shadow: 4px 2px 2px white;
+}
+
+#slide1 p{
+    margin-left: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+}
+
+/*
+* @section Layout
+* =slide2
+*/
+
+#slide2 img{
+    position: relative;
+}
+
+#slide2 {
+    background: url('../images/borda_cinza.png') 0px -15px no-repeat;
+    background-color: #1f6daa;
+    width: 100%;
+    height: 633px;
+    margin-top: -40px;
+}
+
+.intro{
+    margin-top: -30px;
+}
+
+.intro h2{
+    margin-top: 70px;
+    margin-left: 20px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 6em;
+    color: white;
+    text-shadow: 4px 4px 4px #084b90;
+}
+
+.intro p{
+    margin-left: 20px;
+    margin-top: 4px;
+    margin-bottom: 7px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    width:240px;
+}
+
+.intro a{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    color: #fca60e;
+    transition: all ease-out 500ms;
+    -webkit-transition: all ease-out 500ms;
+    -moz-transition: all ease-out 500ms;
+    -ms-transition: all ease-out 500ms;
+    -o-transition: all ease-out 500ms;
+}
+
+.intro a:hover{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    color: #999;
+}
+
+
+.skills{
+    margin-top: 70px;
+}
+
+.skills img{
+    margin-top: 10px;
+    margin-left: 60px;
+    margin-right: 15px;
+    width: 100px;
+    height:103px;
+    float: left;
+}
+
+.skills h3{
+    color: #194d76;
+    margin-top: 47px;
+    margin-left: 30px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 4em;
+}
+
+
+.skills p{
+    margin-left: 60px;
+    margin-top: 31px;
+    margin-right:40px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+}
+
+#grap{
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 50px;
+    width: 566px;
+    height: 269px;
+    background: url('../images/graf_op.png') 0 0 no-repeat;
+}
+
+#grap:hover{
+    background: url('../images/graf.png') 0 0 no-repeat;
+    transition: all ease-out 900ms;
+    -webkit-transition: all ease-out 900ms;
+    -moz-transition: all ease-out 900ms;
+    -ms-transition: all ease-out 900ms;
+    -o-transition: all ease-out 900ms;
+}
+
+#grap img{
+    width: 566px;
+    height: 269px;
+}
+
+/*
+* @section Layout
+* =slide5
+*/
+
+.back-content-res{
+    background: #e2f1f4;
+    width: 100%;
+    height: 394px;
+}
+
+#slide5{
+    width: 100%;
+    height: 394px;
+    float:left;
+    background: url('../images/border_blue.png') 0px -13px no-repeat;
+
+}
+
+#slide5 h2{
+    margin-top: 80px;
+    margin-left: 20px;
+    font-family: 'Fredoka One', cursive;
+    color: #89a6ac;
+    font-size: 6em;
+    text-shadow: 4px 2px 2px white;
+}
+
+#slide5 p{
+    margin-left: 20px;
+    margin-top: 31px;
+    margin-right:40px;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+}
+
+.links{
+    margin-top: 155px;
+}
+
+.links ul li {
+    margin-left: 70px;
+}
+
+.resea_link{
+    margin-bottom: 10px;
+}
+
+.resea_link a{
+    font-family: 'Fredoka One', cursive;
+    color: #39393a;
+    font-size: 1.5em;
+    transition: all ease-out 500ms;
+    -webkit-transition: all ease-out 500ms;
+    -moz-transition: all ease-out 500ms;
+    -ms-transition: all ease-out 500ms;
+    -o-transition: all ease-out 500ms;
+}
+
+.resea_link a:hover{
+    font-family: 'Fredoka One', cursive;
+    color: #999;
+    font-size: 1.5em;
+}
+
+
+/*
+* @section Layout
+* =footer
+*/
+
+footer h2{
+    margin-top: 70px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-family: 'Fredoka One', cursive;
+    color: #000;
+    font-size: 3.2em;
+    text-shadow: 4px 2px 2px #f3f3f3;
+}
+
+/*footer .bt_social:first-child {
+    margin-left: 20px;
+}*/
+
+footer ul {
+    margin-left: -24px;
+}
+
+footer .bt_social {
+    display: inline;
+    margin-left: 5px;
+}
+
+#contact {
+    margin-left: 20px;
+    margin-top: 23px;
+    margin-bottom: 70px;
+    float:left;
+}
+
+#contact a {
+    color: #89a6ac;
+    font-size: 1.8em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#contact a:hover {
+    color: #89a6ac;
+    font-size: 1.8em;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#contact p {
+    margin-top: 6px;
+    color: #89a6ac;
+    font-size: 2em;
+    font-family: 'Fredoka One', cursive;
+}
+
+.by{
+    margin-left: 200px;
+    margin-top: 19px;
+    color: #89a6ac;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    float: left;
+}
+
+
+footer a{
+    color: black;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+footer a:hover{
+    color: #999;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#social_share{
+    float: left;
+    margin-top: 0px;
+    margin-left: 250px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    width: 290px;
+}
+
+
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 1060px;
+    }
+
+    /* Remove the padding we set earlier */
+    .header,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+
+}
