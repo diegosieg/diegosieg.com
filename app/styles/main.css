@@ -9,6 +9,7 @@
 body {
     padding-bottom: 20px;
     font-size: 11px;
+    background: #d4dfe3;
 }
 
 ul {
@@ -288,7 +289,7 @@ header h1 a:hover{
 .back-content-res{
     width: 100%;
     height: 394px;
-    background: url('../images/border_blue.png') 0px -13px no-repeat;
+    background: #fbfbfb url('../images/border_blue.png') 0px -13px no-repeat;
 }
 
 #slide5{
@@ -503,7 +504,6 @@ footer a:hover{
         height: 714px;
         background: url('../images/robo1.png') 288px 210px no-repeat,
         url('../images/sombra.png') 325px 650px no-repeat,
-        url('../images/robo2.png') 32px 220px no-repeat,
         url('../images/zero_one.png') 6px 50px no-repeat
     }
     #slide1 h2 {
