@@ -11,6 +11,10 @@ body {
     font-size: 11px;
 }
 
+ul {
+    list-style: none;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .footer {
@@ -177,7 +181,7 @@ header h1 a:hover{
     background: url('../images/borda_cinza.png') 0px -15px no-repeat;
     background-color: #1f6daa;
     width: 100%;
-    height: 633px;
+    height: 533px;
     margin-top: -40px;
 }
 
@@ -186,7 +190,7 @@ header h1 a:hover{
 }
 
 .intro h2{
-    margin-top: 70px;
+    margin-top: 120px;
     margin-left: 20px;
     font-family: 'Fredoka One', cursive;
     font-size: 6em;
@@ -201,7 +205,6 @@ header h1 a:hover{
     color: white;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.1em;
-    width:240px;
 }
 
 .intro a{
@@ -259,8 +262,8 @@ header h1 a:hover{
     margin-top: 40px;
     margin-left: 10px;
     margin-right: 50px;
-    width: 566px;
-    height: 269px;
+    height: 185px;
+    width: 100%;
     background: url('../images/graf_op.png') 0 0 no-repeat;
 }
 
@@ -274,8 +277,7 @@ header h1 a:hover{
 }
 
 #grap img{
-    width: 566px;
-    height: 269px;
+    width: 100%;
 }
 
 /*
@@ -284,16 +286,16 @@ header h1 a:hover{
 */
 
 .back-content-res{
-    background: #e2f1f4;
     width: 100%;
     height: 394px;
+    background: url('../images/border_blue.png') 0px -13px no-repeat;
 }
 
 #slide5{
     width: 100%;
     height: 394px;
     float:left;
-    background: url('../images/border_blue.png') 0px -13px no-repeat;
+
 
 }
 
@@ -350,6 +352,10 @@ header h1 a:hover{
 * =footer
 */
 
+footer{
+        background: #e2f1f4;
+}
+
 footer h2{
     margin-top: 70px;
     margin-left: 20px;
@@ -404,13 +410,12 @@ footer .bt_social {
 }
 
 .by{
-    margin-left: 200px;
     margin-top: 19px;
     color: #89a6ac;
     font-size: 1em;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
-    float: left;
+    text-align: center;
 }
 
 
@@ -429,10 +434,10 @@ footer a:hover{
 #social_share{
     float: left;
     margin-top: 0px;
-    margin-left: 250px;
     margin-bottom: 10px;
     overflow: hidden;
-    width: 290px;
+    padding-top: 80px;
+    padding-left: 60px;
 }
 
 
@@ -456,4 +461,80 @@ footer a:hover{
         margin-bottom: 30px;
     }
 
+}
+
+
+@media screen and (max-width: 995px) {
+    #slide1 {
+            background: url('../images/robo1.png') 547px 60px no-repeat,
+                 url('../images/sombra.png') 575px 510px no-repeat,
+                 url('../images/robo2.png') 302px 220px no-repeat,
+                 url('../images/zero_one.png') 6px 50px no-repeat;
+    }
+
+    #slide2 {
+        height:   873px;
+    }
+    .skills {
+        margin-top: 40px;
+    }
+    .skills img {
+        margin-left: 15px;
+    }
+    .skills p {
+        margin-left: 25px;
+    }
+    #grap {
+        /*margin-left: 50px;*/
+    }
+    .links {
+        margin-top: 35px;
+    }
+    .links ul li {
+        margin-left: 5px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .back-content {
+        height: 714px;
+    }
+    #slide1 {
+        height: 714px;
+        background: url('../images/robo1.png') 288px 210px no-repeat,
+        url('../images/sombra.png') 325px 650px no-repeat,
+        url('../images/robo2.png') 32px 220px no-repeat,
+        url('../images/zero_one.png') 6px 50px no-repeat
+    }
+    #slide1 h2 {
+        margin-top: 40px;
+    }
+    #slide2 {
+        margin-top: 0px;
+    }
+}
+
+
+@media screen and (max-width: 620px) {
+    #slide2 {
+        height: 653px;
+    }
+    #grap {
+        visibility: hidden;
+        display: none;
+        margin: 0px;
+    }
+    .links ul li {
+        margin-left: -16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #slide2 {
+        height: 790px;
+    }
+    .back-content-res {
+        height: 484px;
+    }
 }
