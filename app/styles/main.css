@@ -103,7 +103,7 @@ header h1 a:hover{
 #menu{
     float: right;
     margin-top: 82px;
-    margin-right:20px;
+    /*margin-right:20px;*/
 }
 
 #menu .item {
@@ -431,38 +431,20 @@ footer a:hover{
     font-family: 'Open Sans', sans-serif;
 }
 
-#social_share{
+#social_share {
     float: left;
     margin-top: 0px;
     margin-bottom: 10px;
     overflow: hidden;
     padding-top: 80px;
     padding-left: 60px;
+    text-align: right;
 }
 
 
 
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 1060px;
-    }
-
-    /* Remove the padding we set earlier */
-    .header,
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    /* Space out the masthead */
-    .header {
-        margin-bottom: 30px;
-    }
-
-}
-
+/*Media queries*/
 
 @media screen and (max-width: 995px) {
     #slide1 {
@@ -496,7 +478,24 @@ footer a:hover{
 }
 
 
-@media screen and (max-width: 800px) {
+/* Responsive: Portrait tablets and up */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 1060px;
+    }
+
+    /* Remove the padding we set earlier */
+    .header,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+
     .back-content {
         height: 714px;
     }
@@ -511,7 +510,14 @@ footer a:hover{
         margin-top: 40px;
     }
     #slide2 {
-        margin-top: 0px;
+        margin-top: -2px;
+    }
+    #grap {
+        background: url('../images/graf.png') 0 0 no-repeat;
+    }
+    #social_share {
+        padding-top: 30px;
+        padding-left: 100px;
     }
 }
 
@@ -528,13 +534,27 @@ footer a:hover{
     .links ul li {
         margin-left: -16px;
     }
+    #social_share {
+        padding-top: 20px;
+        padding-left: 40px;
+    }
 }
 
 @media screen and (max-width: 480px) {
+    #slide1 {
+        background: url('../images/robo2.png') 52px 320px no-repeat,
+            url('../images/zero_one.png') 6px 50px no-repeat;
+    }
+
     #slide2 {
-        height: 790px;
+        height: 820px;
     }
     .back-content-res {
         height: 484px;
+    }
+    #social_share {
+        padding-top: 10px;
+        padding-left: 40px;
+        text-align: none;
     }
 }
