@@ -566,10 +566,10 @@ header h2 {
     transition:top .4s ease-in-out,right .4s ease-in-out
 }
 .effect img.top:hover {
-    top:-230px;
-    right:-330px;
-    padding-bottom:200px;
-    padding-left:300px
+    top: -230px;
+    right: -330px;
+    padding-bottom: 200px;
+    padding-left: 300px
 }
 
 
