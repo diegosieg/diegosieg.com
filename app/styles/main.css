@@ -555,21 +555,33 @@ header h2 {
 }
 .effect img {
     width: 100%;
-    position:absolute;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 10px 0 0 0;
+    -webkit-transition:bottom .9s ease-in-out;
+    -moz-transition:bottom .9s ease-in-out;
+    -o-transition:bottom .9s ease-in-out;
+    transition:bottom .9s ease-in-out;
+
+/*    position:absolute;
     margin: 0;
     right:0;
-    top:0;
+    top:0;*/
     /*cursor:pointer;*/
-    -webkit-transition:top .4s ease-in-out,right .4s ease-in-out;
+/*    -webkit-transition:top .4s ease-in-out,right .4s ease-in-out;
     -moz-transition:top .4s ease-in-out,right .4s ease-in-out;
     -o-transition:top .4s ease-in-out,right .4s ease-in-out;
-    transition:top .4s ease-in-out,right .4s ease-in-out
+    transition:top .4s ease-in-out,right .4s ease-in-out;*/
 }
 .effect img.top:hover {
-    top: -230px;
+/*    top: -230px;
     right: -330px;
     padding-bottom: 200px;
-    padding-left: 300px
+    padding-left: 300px*/
+    bottom:-240px;
+    padding-top:100px
 }
 
 
@@ -693,6 +705,22 @@ footer.contact ul {
     #social_share {
         padding-top: 20px;
         padding-left: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .boxes {
+        height: auto;
+    }
+    .effect img {
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 40px;
+        margin-left: -20px;
+    }
+    .effect img.top:hover {
+        bottom: 0;
+        padding-top: 10px;
     }
 }
 
