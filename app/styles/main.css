@@ -542,13 +542,13 @@ header h2 {
     position:relative
 }
 .boxes p {
-    font-family:'Lato';
+    font-family: 'Open Sans', sans-serif;;
     font-size:12px;
     line-height:18px;
     margin:0
 }
 .boxes h2 {
-    font-family:'Lato';
+    font-family: 'Open Sans', sans-serif;;
     font-size:20px;
     line-height:24px;
     margin:0;
@@ -559,7 +559,7 @@ header h2 {
     margin: 0;
     right:0;
     top:0;
-    cursor:pointer;
+    /*cursor:pointer;*/
     -webkit-transition:top .4s ease-in-out,right .4s ease-in-out;
     -moz-transition:top .4s ease-in-out,right .4s ease-in-out;
     -o-transition:top .4s ease-in-out,right .4s ease-in-out;
