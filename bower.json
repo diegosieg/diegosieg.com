@@ -1,0 +1,9 @@
+{
+  "name": "Diegosieg.com",
+  "version": "2.0.0",
+  "devDependencies": {
+    "breakpoint-sass": "2.*"
+  },
+  "dependencies": {
+  }
+}

@@ -1,0 +1,30 @@
+/**
+ * SETTINGS.COLORS
+ *
+ * @description : Color variable definitions
+ *
+ */
+
+/**
+ * Main Colours
+ */
+$alpha         : #000000;  // Color name
+$beta          : #111111;  // Color name
+$gamma         : #000000;  // Color name
+$delta         : #000000;  // Color name
+//$kappa       : #000000;  // Color name
+//$tau         : #000000;  // Color name
+//$psi         : #000000;  // Color name
+//$omega       : #000000;  // Color name
+
+
+$heading-color : $alpha;
+$text-color    : $beta;
+
+/**
+ * UX/Validation colors
+ */
+$notice        : #2ab9ff;  // Blue
+$confirm       : #6fd100;  // Green
+$alert         : #ffa800;  // Orange
+$warning       : #c60000;  // Red

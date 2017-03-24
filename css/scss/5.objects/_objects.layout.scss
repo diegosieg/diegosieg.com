@@ -1,0 +1,37 @@
+/**
+ * OBJECTS.LAYOUT
+ *
+ * @description : Core layout objects used in addition to the grid
+ *
+ */
+
+/*  e.g.
+
+    .o-page {
+        padding-bottom: rem(40);
+    }
+
+*/
+
+.box {
+    margin: 1rem;
+    height: calc(100vh - 2rem);
+    position: relative;
+    //filter: blur(2px) grayscale(80%);
+
+    .box-overlay,
+    .box-image-layer {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0,0,0,0.8);
+        filter: blur(1px) grayscale(50%);
+    }
+    .box-image-layer {
+        background: url(../images/bg2.png);
+    }
+}

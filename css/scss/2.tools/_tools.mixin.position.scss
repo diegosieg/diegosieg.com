@@ -1,0 +1,21 @@
+/**
+ * TOOLS.MIXIN.POSITION
+ *
+ * @description :  Sets top, left, right and bottom values for an element
+ *
+ */
+
+@mixin position($top:'auto', $right:'auto', $bottom:'auto', $left:'auto'){
+    @if($top != 'auto') {
+        top: $top;
+    }
+    @if($right != 'auto') {
+        right: $right;
+    }
+    @if($bottom != 'auto') {
+        bottom: $bottom;
+    }
+    @if($left != 'auto') {
+        left: $left;
+    }
+}

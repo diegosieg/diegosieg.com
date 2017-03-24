@@ -1,0 +1,15 @@
+/**
+ * TOOLS.FUNCTIONS.STRIPUNIT
+ *
+ * @description : Strips the unit from a value to we can use it for calculations
+ * @source      : https://css-tricks.com/snippets/sass/strip-unit-function/
+ *
+ */
+
+@mixin clearfix {
+	&::after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+}

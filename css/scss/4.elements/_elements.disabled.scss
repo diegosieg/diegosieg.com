@@ -1,0 +1,15 @@
+/**
+ * ELEMENTS.DISABLED
+ *
+ * @description : Default styles for disabled elements
+ *
+ */
+
+// The absence of the attribute is the only valid syntax for "false"
+.disabled,
+*:disabled,
+[disabled] {
+    cursor: default;
+    opacity: 0.5;
+    pointer-events: none;
+}
