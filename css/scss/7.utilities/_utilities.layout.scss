@@ -5,7 +5,7 @@
  *                Userful for quickly applying common adjustments.
  */
 
-
+//float
 .u-fr {
     float: right;
 }
@@ -14,10 +14,23 @@
     float: left;
 }
 
+//margin
 .u-mb {
     margin-bottom: $spacer;
 }
+.u-mc {
+    margin: 0 auto;
+}
 
-.ta-c{
+//text align
+.u-tac{
     text-align: center;
+}
+.u-tar{
+    text-align: right;
+}
+
+//background
+.u-bg-pink {
+    background-color: $beta;
 }

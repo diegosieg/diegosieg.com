@@ -5,33 +5,41 @@
  *
  */
 
-/*  e.g.
+.o-page {
+    padding-bottom: rem(80);
+    padding-top: rem(40);
+}
 
-    .o-page {
-        padding-bottom: rem(40);
-    }
-
-*/
-
-.box {
-    margin: 1rem;
-    height: calc(100vh - 2rem);
+.tilt {
+    overflow: hidden;
     position: relative;
-    //filter: blur(2px) grayscale(80%);
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
 
-    .box-overlay,
-    .box-image-layer {
-        display: block;
-        position: absolute;
-        width: 100%;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(0,0,0,0.8);
-        filter: blur(1px) grayscale(50%);
-    }
-    .box-image-layer {
-        background: url(../images/bg2.png);
-    }
+.tilt__back,
+.tilt__front {
+    width: 100%;
+    height: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.tilt__back {
+    position: relative;
+}
+
+.tilt__front {
+    filter: grayscale(.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.grid__img {
+    height: 300px;
 }
