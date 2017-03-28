@@ -1,0 +1,36 @@
+/**
+ * COMPONENTS. INTRO
+ *
+ * @description : Test
+ *
+ */
+
+ .c-intro {
+
+ }
+
+ .c-intro-columns {
+    columns: 2 300px;
+    column-gap: 2em;
+ }
+
+ .c-intro-keypoints__list {
+     display: inline-block;
+ }
+
+.c-intro-keypoints__item {
+    border-bottom: 4px solid $gamma;
+    display: inline-block;
+    font-size: 1.8em;
+    margin-right: 2rem;
+    padding-bottom: .2rem;
+    padding-top: 4rem;
+	@include breakpoint($sm){
+        border-bottom: 6px solid $gamma;
+		font-size: 2.4em;
+	}
+	@include breakpoint($lg){
+        border-bottom: 12px solid $gamma;
+		font-size: 4em;
+	}
+ }

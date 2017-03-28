@@ -9,13 +9,36 @@
     <link rel="stylesheet" href="css/master.css" media="all">
     <script>
         document.documentElement.className = 'js';
+
     </script>
 </head>
 
 <body class="">
     <div class="b-fluid">
+
+        <header class="c-top-bar" style="position: fixed; top:0; width: 100%; background: transparent;">
+            <button id="burger-menu" type="button" aria-label="Menu" aria-controls="main-nav" class="hamburger hamburger--collapse">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </header>
+
+        <div class="c-navigation" style="display: none;">
+            <nav role="navigation" id="c-main-nav" class="c-main-nav c-main-nav--open">
+                <ul class="c-main-nav__list">
+                    <li class="c-main-nav__list-item"><a href="/" class="active">Home</a></li>
+                    <li class="c-main-nav__list-item"><a href="/my-work" class="">Work</a></li>
+                    <li class="c-main-nav__list-item"><a href="/photos" class="">Photos</a></li>
+                    <li class="c-main-nav__list-item"><a href="/Music" class="">Music</a></li>
+                    <li class="c-main-nav__list-item"><a href="/my-cv" class="">My CV</a></li>
+                    <li class="c-main-nav__list-item"><a href="/contact" class="">Contact</a></li>
+                </ul>
+                </nav>
+        </div>
+
         <div class="g">
-            <header class="c-hero gi g-12 u-bg-pink">
+            <section class="c-hero gi g-12 u-bg-pink">
                 <div class="c-hero-box">
                     <span class="c-hero-box-image-layer"></span>
                     <span class="c-hero-box-overlay"></span>
@@ -23,7 +46,7 @@
                         <svg class="c-text-header" viewBox="0 0 700 259">
                             <text class="c-svg-text" transform="matrix(1 0 0 1 -0.00007 116.14385)">
                                 <tspan x="0" y="0" font-family="'Roboto'" font-size="142px">ALIEN</tspan>
-                                <tspan x="0" y="139" font-family="'Roboto'" font-size="167px">YOU</tspan>
+                                <tspan x="0" y="139" font-family="'Roboto'" font-size="167px">YOU.</tspan>
                             </text>
                             <circle fill="#FFFFFF" cx="128.50781" cy="126.5" r="34.5" />
                             <text transform="matrix(1 0 0 1 114.62256 123)">
@@ -33,35 +56,74 @@
                         </svg>
                     </div>
                 </div>
-            </header>
-            <div class="o-page gi gi-12">
+            </section>
+
+            <div class="o-page gi-m gi-12">
                 <div class="b-s u-mc">
-                    <div class="g">
-                        <div class="gi gi-12">
-                            <h1 class="u-tac">Hello. I'm <span class="glitch" data-text="Diego Sieg">Diego Sieg</span></h1>
-                            <p>I am a Brazilian Front-End Web Developer & Mobile App Developer based in the beaufiful Christchurch, New Zealand. I've got more than 7 years of experience in digital products, hundreds of websites/apps developed for companies in Brazil, New Zealand, Australia, UK and USA.</p>
+                    <section class="g c-intro">
+
+                        <div class="gi gi-12 c-intro">
+                            <h1 class="u-tac">Hello. I'm <span class="glitch" data-text="Diego Sieg">Diego Sieg</span>.</h1>
+                            <div class="c-intro-columns">
+                                <p>I am a Brazilian Front-End Web Developer & Mobile App Developer currently based in the beautiful shaky city of Christchurch,
+                                    New Zealand. </p>
+                                <p>I've got more than 7 years of experience in digital products, heaps of
+                                    websites/apps developed for companies in Brazil, New Zealand, Australia, UK and USA.</p>
+                                <p>I am totally crazy about coffee, risotos, maps, travels, photos, and... JS &#60;3. Besides that, I am a quick learner and I do love learning new things everyday.</p>
+                                <p>So, during my whole live I have been mixing knowledge of multiple fields such as Information Technology, Design, Digital Media, Data-driven Journalism, Digital Marketing and Business Innovation.</p>
+                                <p>At the moment, I have been using these different tools, libraries and frameworks in the wide
+                                    range of projects I am involved:</p>
+                                <p>html5, css3, sass, javascript (ES5 and ES6), jquery, vue.js, angular.js, knockout.js, typescript,
+                                    ionic 2, cordova, d3.js, highcharts.js, video.js, googlemaps API, grunt, gulp, webpack,
+                                    npm, bower, xaml, xamarin, c#, shopify, wordpress, umbraco etc</p>
+                            </div>
                         </div>
 
-                        <div class="gi gi-4 grid__img">
+
+                        <div class="gi gi-12 c-intro-keypoints">
+                            <ul class="c-intro-keypoints__list">
+                                <li class="c-intro-keypoints__item">Front-end Web Development</li>
+                                <li class="c-intro-keypoints__item">Web & Native App Development</li>
+                                <li class="c-intro-keypoints__item">Digital Media & Marketing</li>
+                                <li class="c-intro-keypoints__item">Data-driven Journalism</li>
+                                <li class="c-intro-keypoints__item">Data Visualization</li>
+                                <li class="c-intro-keypoints__item">Design & UX</li>
+                                <li class="c-intro-keypoints__item">Agile Management</li>
+                                <li class="c-intro-keypoints__item">Innovation Strategies</li>
+                                <li class="c-intro-keypoints__item">Design Thinking</li>
+                            </ul>
+                        </div>
+
+                    </section>
+
+                    <section class="g c-boxes">
+                        <header class="gi gi-12">
+                            <h2>...</h2>
+                        </header>
+
+                        <div class="gi gi-12 gi-sm-6 gi-md-4 grid__img">
                             <img src="images/2.png" class="tilt-effect" data-tilt-options='{ "extraImgs" : 2, "opacity" : 0.9, "bgfixed" : false, "customImgsOpacity" : [0.4, 0.9, 0.06], "movement": { "perspective" : 1000, "translateX" : 30, "translateY" : 30, "translateZ" : -50, "rotateX" : 3, "rotateY" : 3, "rotateZ" : 10 } }'
                                 alt="grid01" />
                         </div>
-                        <div class="gi gi-4 grid__img">
+                        <div class="gi gi-12 gi-sm-6 gi-md-4 grid__img">
                             <img src="images/1.png" class="tilt-effect" data-tilt-options='{ "extraImgs" : 2, "opacity" : 0.9, "bgfixed" : false, "customImgsOpacity" : [0.4, 0.9, 0.06], "movement": { "perspective" : 1000, "translateX" : 30, "translateY" : 30, "translateZ" : -50, "rotateX" : 3, "rotateY" : 3, "rotateZ" : 10 } }'
                                 alt="grid01" />
                         </div>
-                        <div class="gi gi-4 grid__img">
+                        <div class="gi gi-12 gi-sm-6 gi-md-4 grid__img">
                             <img src="images/bg.png" class="tilt-effect" data-tilt-options='{ "extraImgs" : 2, "opacity" : 0.9, "bgfixed" : false, "customImgsOpacity" : [0.4, 0.9, 0.06], "movement": { "perspective" : 1000, "translateX" : 30, "translateY" : 30, "translateZ" : -50, "rotateX" : 3, "rotateY" : 3, "rotateZ" : 10 } }'
                                 alt="grid01" />
                         </div>
+                    </section>
 
-                    </div>
+
                 </div>
-
-
-
             </div>
+
         </div>
+
+        <footer class="c-footer">
+
+        </footer>
     </div>
     <script src="scripts/tiltfx.js"></script>
 </body>

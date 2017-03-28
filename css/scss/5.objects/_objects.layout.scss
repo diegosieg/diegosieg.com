@@ -10,6 +10,14 @@
     padding-top: rem(40);
 }
 
+.c-footer {
+    background: $delta;
+
+
+    width: 100%;
+    min-height: 60vh;
+}
+
 .tilt {
     overflow: hidden;
     position: relative;
