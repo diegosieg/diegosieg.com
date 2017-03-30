@@ -8,6 +8,56 @@
 .o-page {
     padding-bottom: rem(80);
     padding-top: rem(40);
+    position: relative;
+}
+
+.o-item-flex {
+    flex-grow: 1;
+}
+
+.o-tag {
+    display: inline-block;
+    margin-right: 1.66%;
+    margin-bottom: .4rem;
+    padding: 0.2rem .5rem;
+}
+
+.c-box-content {
+    z-index: 5;
+    position: relative;
+}
+
+
+.c-bg-dots {
+    height: 600px; //width * 2
+    width: 300px;
+    border-bottom-right-radius: 600px; //width * 2
+    border-top-right-radius: 600px; //width * 2
+    position: absolute;
+    left: -40px;
+    top: 540px;
+
+    background:
+    radial-gradient(rgba(0,0,0,.2) 15%, transparent 16%) 0 0,
+    radial-gradient(rgba(0,0,0,.2) 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:transparent;
+    background-size:16px 16px;
+
+    @include breakpoint($md) {
+        height: 1000px; //width * 2
+        width: 500px;
+        border-bottom-right-radius: 1000px; //width * 2
+        border-top-right-radius: 1000px; //width * 2
+    }
+    @include breakpoint($lg) {
+        height: 1600px; //width * 2
+        width: 800px;
+        border-bottom-right-radius: 1600px; //width * 2
+        border-top-right-radius: 1600px; //width * 2
+    }
+
 }
 
 .c-footer {

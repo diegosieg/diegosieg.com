@@ -108,6 +108,14 @@ $gridMap: (); //set an empty map for starters
     word-spacing: -0.43em;
 }
 
+.g-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+}
 
 /** -------------------------
  *  GRID ITEMS

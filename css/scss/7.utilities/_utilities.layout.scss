@@ -22,6 +22,23 @@
     margin: 0 auto;
 }
 
+.u-ml {
+    padding-left: 1.66%;
+}
+
+.u-mr {
+    padding-right: 1.66%;
+}
+
+
+.u-pl {
+    padding-left: 1.66%;
+}
+
+.u-pr {
+    padding-right: 1.66%;
+}
+
 //text align
 .u-tac{
     text-align: center;
@@ -30,7 +47,29 @@
     text-align: right;
 }
 
+//text
+.u-small-text {
+    color: $tau;
+    font-size: 1rem;
+}
+
+
 //background
 .u-bg-pink {
     background-color: $beta;
+}
+
+.u-highlight {
+    background-color: $kappa;
+}
+.u-highlight-yellow {
+    background-color: $delta;
+}
+.u-highlight-pink {
+    background-color: $beta;
+    color: $kappa;
+}
+.u-highlight-blue {
+    background-color: $gamma;
+    color: $kappa;
 }

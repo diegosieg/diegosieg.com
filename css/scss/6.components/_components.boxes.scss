@@ -1,0 +1,15 @@
+.c-box {
+    height: 50vh;
+    width: 100%;
+    @include breakpoint($md) {
+        width: 50%;
+    }
+}
+.c-box-with-text {
+    background-color: #ccc;
+}
+
+.c-box-with-image {
+    background-color: #000;
+    color: #fff;
+}
