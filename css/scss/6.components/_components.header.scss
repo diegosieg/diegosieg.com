@@ -30,10 +30,12 @@
         left: 0;
         right: 0;
         background: rgba(0, 0, 0, 0.8);
-        filter: blur(1px) grayscale(50%);
+        //filter: blur(1px) grayscale(90%);
     }
     .c-hero-box-image-layer {
         background: url(../images/bg2.png);
+        background-size: cover;
+        background-position: 0 center;
     }
 }
 

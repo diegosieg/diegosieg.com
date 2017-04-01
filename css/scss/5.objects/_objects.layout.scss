@@ -16,6 +16,7 @@
 }
 
 .o-tag {
+    font-family: $body-font;
     display: inline-block;
     margin-right: 1.66%;
     margin-bottom: .4rem;
@@ -35,7 +36,7 @@
     border-top-right-radius: 600px; //width * 2
     position: absolute;
     left: -40px;
-    top: 540px;
+    top: 700px;
 
     background:
     radial-gradient(rgba(0,0,0,.2) 15%, transparent 16%) 0 0,
@@ -50,6 +51,7 @@
         width: 500px;
         border-bottom-right-radius: 1000px; //width * 2
         border-top-right-radius: 1000px; //width * 2
+        top: 540px;
     }
     @include breakpoint($lg) {
         height: 1600px; //width * 2
@@ -60,44 +62,76 @@
 
 }
 
-.c-footer {
-    background: $delta;
-
-
-    width: 100%;
-    min-height: 60vh;
-}
-
-.tilt {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-}
-
-.tilt__back,
-.tilt__front {
-    width: 100%;
-    height: 100%;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.tilt__back {
-    position: relative;
-}
-
-.tilt__front {
-    filter: grayscale(.5);
+.c-bg-dots-blue {
+    height: 500px; //width * 2
+    width: 250px;
+    border-bottom-right-radius: 500px; //width * 2
+    border-top-right-radius: 500px; //width * 2
     position: absolute;
-    top: 0;
-    left: 0;
+    right: -30px;
+    top: 300px;
+    transform: rotate(180deg);
+
+    background:
+    radial-gradient(rgba(33, 150, 243,.4) 15%, transparent 16%) 0 0,
+    radial-gradient(rgba(33, 150, 243,.4) 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color: transparent;
+    background-size: 16px 16px;
+
 }
 
-.grid__img {
-    height: 300px;
+.c-bg-dots-pink {
+    height: 700px; //width * 2
+    width: 350px;
+    border-bottom-right-radius: 700px; //width * 2
+    border-top-right-radius: 700px; //width * 2
+    position: absolute;
+    right: -30px;
+    bottom: 100px;
+    transform: rotate(180deg);
+
+    background:
+    radial-gradient(rgba(255, 55, 87,.3) 15%, transparent 16%) 0 0,
+    radial-gradient(rgba(255, 55, 87,.3) 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color: transparent;
+    background-size: 16px 16px;
+
 }
+
+// .tilt {
+//     overflow: hidden;
+//     position: relative;
+//     width: 100%;
+//     height: 100%;
+//     margin: 0 auto;
+// }
+
+// .tilt__back,
+// .tilt__front {
+//     width: 100%;
+//     height: 100%;
+//     background-position: 50% 50%;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     -webkit-backface-visibility: hidden;
+//     backface-visibility: hidden;
+// }
+
+// .tilt__back {
+//     position: relative;
+// }
+
+// .tilt__front {
+//     filter: grayscale(.5);
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+// }
+
+// .grid__img {
+//     height: 300px;
+// }

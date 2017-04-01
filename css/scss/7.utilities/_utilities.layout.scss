@@ -52,6 +52,19 @@
     color: $tau;
     font-size: 1rem;
 }
+.u-first-paragraph {
+  &:first-child {
+    &:first-letter {
+      font-family: $serif;
+      font-weight: 300;
+      float: left;
+      font-size: 3.4rem;
+      margin-right: 16px;
+      line-height: 1;
+      padding-top: 2px;
+    }
+  }
+}
 
 
 //background

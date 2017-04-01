@@ -28,6 +28,7 @@ var imagemin 		= require('gulp-imagemin');			// Optimises images
 var autoprefixer    = require('gulp-autoprefixer');     // Adds vendor prefixes to css rules
 var browserSync     = require('browser-sync').create(); // Reloads the browser on file changes
 
+
 require('es6-promise').polyfill();                      // Adds es6 promises support
 
 
@@ -46,7 +47,7 @@ var dirs = {
 // Sass Output Settings
 var sassConfig = {
     errLogToConsole: false,
-    outputStyle: 'nested'  // default: 'nested' to allow minifiying by bundles, or: 'expanded', 'compact', 'compressed'
+    outputStyle: 'compressed'  // default: 'nested' to allow minifiying by bundles, or: 'expanded', 'compact', 'compressed'
 };
 
 // Autoprefixer config

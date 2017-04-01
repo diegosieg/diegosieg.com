@@ -21,6 +21,7 @@
     "gulp-uncss": "^1.0",
     "gulp-util": "^3.0.7",
     "gutil": "^1.6.4",
-    "meow": "^3.3.0"
+    "meow": "^3.3.0",
+    "postcss-clip-path-polyfill": "^1.0.4"
   }
 }

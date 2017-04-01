@@ -19,6 +19,19 @@
 @include breakpoint($sm) {
     .c-intro {
         .glitch {
+            font-size: rem(75);
+        }
+    }
+
+    .c-intro-title {
+        font-size: rem(75);
+        line-height: $base-line-height * 3.5;
+    }
+}
+
+@include breakpoint($md) {
+    .c-intro {
+        .glitch {
             font-size: rem(90);
         }
     }
@@ -30,11 +43,12 @@
 }
 
  .c-intro-columns {
-    // columns: 2 300px;
-    // column-gap: 2em;
     padding: 4rem 0;
+    padding-left: 6px;
     p {
+        font-family: $serif;
         font-size: rem(20);
+        line-height: 1.4;
     }
     @media(max-width: $sm) {
         padding-left: 0 !important;
@@ -43,13 +57,14 @@
     }
  }
 
-.c-intro-image {
-
-    width: 50%;
-    img {
-        border-radius: 50%;
+.c-intro-photo {
+    margin-top: 2.5rem;
+    border-radius: 50%;
+    clip-path: polygon(30% -30%, 100% 50%, 50% 100%, 0% 50%);
+    transition: all .3s ease-in-out;
+    &:hover {
+        clip-path: polygon(80% -10%, 80% 70%, 20% 80%, -50% 40%);
     }
-
 }
 
  .c-intro-keypoints__list {
