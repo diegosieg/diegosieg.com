@@ -1,0 +1,86 @@
+/**
+ * COMPONENTS.Text Header
+ *
+ * @description : Test
+ *
+ */
+
+//hero
+.c-hero-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2em;
+    @include breakpoint($lg) {
+        width: 80%;
+        padding: 4em;
+    }
+}
+
+.c-hero-box {
+    margin: 1rem;
+    height: calc(100vh - 2rem);
+    position: relative; //filter: blur(2px) grayscale(80%);
+    .c-hero-box-overlay,
+    .c-hero-box-image-layer {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.8);
+        //filter: blur(1px) grayscale(90%);
+    }
+    .c-hero-box-image-layer {
+        background: url(../images/bg2.png);
+        background-size: cover;
+        background-position: 0 center;
+    }
+}
+
+//SVG Fancy Text
+.c-svg-text {
+    -webkit-animation: pallete 6s infinite;
+    animation: pallete 6s infinite;
+}
+
+.c-text-header {
+    -webkit-animation: wave 4s linear infinite;
+    animation: wave 4s linear infinite;
+    -webkit-transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    transform-origin: bottom;
+}
+
+@keyframes wave {
+    0%,
+    100% {
+        -webkit-transform: rotate(-2deg);
+        transform: rotate(-2deg);
+    }
+    50% {
+        -webkit-transform: rotate(3deg);
+        transform: rotate(3deg);
+    }
+}
+
+@keyframes pallete {
+    0% {
+        fill: #FF3757;
+    }
+    25% {
+        fill: #FF715A;
+    }
+    50% {
+        fill: #FFA974;
+    }
+    75% {
+        fill: #FF715A;
+    }
+    100% {
+        fill: #FF3757;
+    }
+}
+
+

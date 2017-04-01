@@ -1,0 +1,88 @@
+/**
+ * UTILITIES.LAYOUT
+ *
+ * @description : These classes trump other preceeding styles.
+ *                Userful for quickly applying common adjustments.
+ */
+
+//float
+.u-fr {
+    float: right;
+}
+
+.u-fl {
+    float: left;
+}
+
+//margin
+.u-mb {
+    margin-bottom: $spacer;
+}
+.u-mc {
+    margin: 0 auto;
+}
+
+.u-ml {
+    padding-left: 1.66%;
+}
+
+.u-mr {
+    padding-right: 1.66%;
+}
+
+
+.u-pl {
+    padding-left: 1.66%;
+}
+
+.u-pr {
+    padding-right: 1.66%;
+}
+
+//text align
+.u-tac{
+    text-align: center;
+}
+.u-tar{
+    text-align: right;
+}
+
+//text
+.u-small-text {
+    color: $tau;
+    font-size: 1rem;
+}
+.u-first-paragraph {
+  &:first-child {
+    &:first-letter {
+      font-family: $serif;
+      font-weight: 300;
+      float: left;
+      font-size: 3.4rem;
+      margin-right: 16px;
+      line-height: 1;
+      padding-top: 2px;
+    }
+  }
+}
+
+
+//background
+.u-bg-pink {
+    background-color: $beta;
+}
+
+.u-highlight {
+    background-color: $kappa;
+}
+.u-highlight-yellow {
+    background-color: $delta;
+}
+.u-highlight-pink {
+    background-color: $beta;
+    color: $kappa;
+}
+.u-highlight-blue {
+    background-color: $gamma;
+    color: $kappa;
+}
