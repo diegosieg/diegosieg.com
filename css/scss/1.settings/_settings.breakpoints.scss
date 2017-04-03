@@ -15,7 +15,8 @@ $breakpoints: (
     "sm" : 34.25em,    // 548px
     "md" : 48em,       // 768px
     "lg" : 64em,       // 1024px
-    "xl" : 90em        // 1440px
+    "xl" : 80em,       // 1280px
+    "xxl" : 90em        // 1440px
 );
 
 // Dump our breakpoints into some vars for easy reference in breakpoint mixins
@@ -23,6 +24,7 @@ $sm:  map-get($breakpoints, sm);
 $md:  map-get($breakpoints, md);
 $lg:  map-get($breakpoints, lg);
 $xl:  map-get($breakpoints, xl);
+$xxl:  map-get($breakpoints, xxl);
 
 /**
     e.g.

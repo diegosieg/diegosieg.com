@@ -68,7 +68,7 @@
     border-bottom-right-radius: 500px; //width * 2
     border-top-right-radius: 500px; //width * 2
     position: absolute;
-    right: -30px;
+    right: -8px;
     top: 300px;
     transform: rotate(180deg);
 
@@ -79,7 +79,12 @@
     radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
     background-color: transparent;
     background-size: 16px 16px;
-
+    @include breakpoint($md) {
+        right: -26px;
+    }
+    @include breakpoint($xl) {
+        right: -30px;
+    }
 }
 
 .c-bg-dots-pink {
@@ -88,7 +93,7 @@
     border-bottom-right-radius: 700px; //width * 2
     border-top-right-radius: 700px; //width * 2
     position: absolute;
-    right: -30px;
+    right: -8px;
     bottom: 100px;
     transform: rotate(180deg);
 
@@ -99,6 +104,12 @@
     radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
     background-color: transparent;
     background-size: 16px 16px;
+    @include breakpoint($md) {
+        right: -26px;
+    }
+    @include breakpoint($xl) {
+        right: -30px;
+    }
 
 }
 

@@ -16,8 +16,17 @@ $backgroundIcons: hsl(210, 45, 10);
     }
   li {
     display: inline-block;
-    margin: 12px; // IE8
-    margin: 1.2rem;
+    margin: 1.2rem 0;
+    width: 50%;
+    float: left;
+    @include breakpoint($sm) {
+        float: none;
+        //margin: 12px; // IE8
+        //margin: 1.2rem;
+        width: 16%;
+    }
+
+
     a, svg {
         display: block;
     }
@@ -26,12 +35,12 @@ $backgroundIcons: hsl(210, 45, 10);
         height: 36px; // IE8
         height: 3.6rem;
         width: 36px; // IE8
-        width: 3.6rem;
+        width: 100%;
         @include breakpoint($sm) {
-            height: 46px; // IE8
-            height: 4.6rem;
-            width: 46px; // IE8
-            width: 4.6rem;
+            height: 36px; // IE8
+            height: 3.6rem;
+            width: 36px; // IE8
+            width: 3.6rem;
         }
     }
     svg {
