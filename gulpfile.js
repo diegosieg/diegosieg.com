@@ -15,6 +15,8 @@
     serve           : Runs the 'watch' task above
     default         : Runs 'serve' task above
     imagemin        : Run image optimisation to save some valuable kb's
+    htmlminify      : Run html minify
+    build           : Run final build to production
  */
 
 /** ------------------------------------------------------------
@@ -27,6 +29,8 @@ var sourcemaps      = require('gulp-sourcemaps');       // Generates sass source
 var imagemin 		= require('gulp-imagemin');			// Optimises images
 var autoprefixer    = require('gulp-autoprefixer');     // Adds vendor prefixes to css rules
 var browserSync     = require('browser-sync').create(); // Reloads the browser on file changes
+var htmlmin         = require('gulp-htmlmin');
+var del             = require('del');
 
 
 require('es6-promise').polyfill();                      // Adds es6 promises support
@@ -39,9 +43,13 @@ require('es6-promise').polyfill();                      // Adds es6 promises sup
 
 // Set up a directories object for easy reference
 var dirs = {
-    css     : 'css',
+    css     : 'dist/css',
     scss    : 'css/scss/**', // Includes all sub directories
-    images  : 'images'
+    images  : 'images',
+    imagesdist  : 'dist/images',
+    full    : 'me',
+    dist    : 'dist',
+    fulldist : 'dist/me'
 };
 
 // Sass Output Settings
@@ -66,6 +74,13 @@ var apConfig = {
 //                Called by simply running 'gulp' from the command line
 gulp.task('default', ['serve']);
 
+// @task        : clean
+// @description : Clean Dist Folder before creating new files
+gulp.task('clean', function () {
+  return del([
+    './dist/**/*'
+  ]);
+});
 
 // @task        : sass
 // @description : Compiles SCSS to CSS
@@ -122,8 +137,29 @@ gulp.task('serve', function() {
 gulp.task('imagemin', function(){
     return gulp.src(dirs.images + '/*')         // Get all images
         .pipe(imagemin())
+        .pipe(gulp.dest(dirs.imagesdist))
         .on('end', function(){
             gutil.log(gutil.colors.green('## Images optimised'));
         });
 });
 
+// @task        : html minify
+// @description : Minify HTML.
+//
+
+//root
+gulp.task('htmlminify', function() {
+  return gulp.src('./*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest(dirs.dist));
+});
+//top folder
+gulp.task('fullhtmlminify', function() {
+  return gulp.src(dirs.full + '/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest(dirs.fulldist));
+});
+
+
+//production build task
+gulp.task('build', ['clean', 'sass', 'htmlminify', 'fullhtmlminify', 'imagemin']);
