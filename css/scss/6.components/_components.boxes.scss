@@ -1,15 +1,32 @@
+.g-flex {
+    overflow: hidden;
+}
 .c-box {
+    background: rgba(0, 0, 0, 0.9);
     height: 50vh;
     width: 100%;
-    @include breakpoint($md) {
+    overflow: hidden;
+    @include breakpoint($sm) {
         width: 50%;
     }
+    @include breakpoint($lg) {
+        width: 25%;
+    }
 }
-.c-box-with-text {
-    background-color: #ccc;
+.c-box-with-image {
+    background-size: cover;
+    height: 100%;
+    opacity: 0.95;
+    transition: all .7s;
+    &:hover {
+        opacity: 1;
+        transform: scale(1.2);
+    }
 }
 
-.c-box-with-image {
-    background-color: #000;
-    color: #fff;
+.c-box-img1 {
+    background-image: url(../images/1.png);
+}
+.c-box-img2 {
+    background-image: url(../images/2.png);
 }
