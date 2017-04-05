@@ -6,6 +6,20 @@
  * example of use = font-family: 'Noto Sans', sans-serif;
  */
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400');
+// @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400');
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+// @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+
+
+.js {
+    body {
+        opacity: 0;
+        transition: opacity .3s;
+    }
+}
+
+.wf-active {
+    body {
+        opacity: 1;
+    }
+}
