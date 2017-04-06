@@ -15,6 +15,8 @@
     serve           : Runs the 'watch' task above
     default         : Runs 'serve' task above
     imagemin        : Run image optimisation to save some valuable kb's
+    htmlminify      : Run html minify
+    build           : Run final build to production
  */
 
 /** ------------------------------------------------------------
@@ -27,6 +29,11 @@ var sourcemaps      = require('gulp-sourcemaps');       // Generates sass source
 var imagemin 		= require('gulp-imagemin');			// Optimises images
 var autoprefixer    = require('gulp-autoprefixer');     // Adds vendor prefixes to css rules
 var browserSync     = require('browser-sync').create(); // Reloads the browser on file changes
+var htmlmin         = require('gulp-htmlmin');
+var del             = require('del');
+var concat          = require('gulp-concat');
+var rename          = require('gulp-rename');
+var uglify          = require('gulp-uglify');
 
 
 require('es6-promise').polyfill();                      // Adds es6 promises support
@@ -39,9 +46,15 @@ require('es6-promise').polyfill();                      // Adds es6 promises sup
 
 // Set up a directories object for easy reference
 var dirs = {
-    css     : 'css',
+    css     : 'dist/css',
     scss    : 'css/scss/**', // Includes all sub directories
-    images  : 'images'
+    images  : 'images',
+    imagesdist  : 'dist/images',
+    full    : 'me',
+    dist    : 'dist',
+    fulldist : 'dist/me',
+    jsFiles : 'scripts',
+    jsDest : 'dist/scripts'
 };
 
 // Sass Output Settings
@@ -66,6 +79,13 @@ var apConfig = {
 //                Called by simply running 'gulp' from the command line
 gulp.task('default', ['serve']);
 
+// @task        : clean
+// @description : Clean Dist Folder before creating new files
+gulp.task('clean', function () {
+  return del([
+    './dist/**/*'
+  ]);
+});
 
 // @task        : sass
 // @description : Compiles SCSS to CSS
@@ -82,6 +102,7 @@ gulp.task('sass', function(){
         }))
         .pipe(autoprefixer(apConfig))                                       // Add out autoprefixing
         .pipe(sourcemaps.write())		                                    // Output sourcemaps to a separate file
+        .pipe(rename('master.min.css'))
         .pipe(gulp.dest(dirs.css)) 				                            // Output compiled css to the css folder
         .pipe(browserSync.stream())
 
@@ -99,6 +120,18 @@ gulp.task('watch', ['sass'], function(){
 
     gulp.watch(dirs.scss +'/*.{scss,sass}', ['sass']);               // If any file changes, re-run the sass task
 
+});
+
+
+//script paths
+
+gulp.task('scripts', function() {
+    return gulp.src(dirs.jsFiles + '/**/*.js')
+        .pipe(concat('scripts.js'))
+        .pipe(gulp.dest(dirs.jsDest))
+        .pipe(rename('scripts.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest(dirs.jsDest));
 });
 
 
@@ -122,8 +155,29 @@ gulp.task('serve', function() {
 gulp.task('imagemin', function(){
     return gulp.src(dirs.images + '/*')         // Get all images
         .pipe(imagemin())
+        .pipe(gulp.dest(dirs.imagesdist))
         .on('end', function(){
             gutil.log(gutil.colors.green('## Images optimised'));
         });
 });
 
+// @task        : html minify
+// @description : Minify HTML.
+//
+
+//root
+gulp.task('htmlminify', function() {
+  return gulp.src('./*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest(dirs.dist));
+});
+//top folder
+gulp.task('fullhtmlminify', function() {
+  return gulp.src(dirs.full + '/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest(dirs.fulldist));
+});
+
+
+//production build task
+gulp.task('build', ['clean', 'sass', 'scripts', 'htmlminify', 'fullhtmlminify', 'imagemin']);
