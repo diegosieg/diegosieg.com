@@ -48,7 +48,7 @@
 				document.querySelector(".c-hero-box-image-layer").style.transform = "scale(" + n + ")";
 			}
 
-			n = Math.random() * 1.1 + 0.9;
+			n = Math.random() * 1.1 + 1;
 			document.querySelector(".c-hero-box-image-layer").style.transform = "scale(" + n + ")";
 			//console.log('t: ' + timesRun);
 
