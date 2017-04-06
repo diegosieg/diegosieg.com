@@ -160,7 +160,10 @@ gulp.task('serve', function() {
 //                May eventually end up being run automatically as part of a build script.
 gulp.task('imagemin', ['clean'], function(){
     return gulp.src(dirs.images + '/*')         // Get all images
-        .pipe(imagemin())
+        .pipe(imagemin({
+            progressive: true,
+            optimizationLevel: 5
+        }))
         .pipe(gulp.dest(dirs.imagesDist))
         .on('end', function(){
             gutil.log(gutil.colors.green('## Images optimised'));

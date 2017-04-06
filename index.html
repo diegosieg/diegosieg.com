@@ -47,13 +47,15 @@
         document.documentElement.className = 'js';
     </script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" async></script>
     <script>
-    WebFont.load({
-        google: {
-        families: ['Roboto', 'Roboto Slab:300,400']
-        }
-    });
+        setTimeout(function(){
+            WebFont.load({
+                google: {
+                families: ['Roboto', 'Roboto Slab:300,400']
+                }
+            });
+        },500);
     </script>
 
 </head>
@@ -313,6 +315,7 @@
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenLite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/easing/EasePack.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/CSSPlugin.min.js"></script>-->
+
     <script src="/scripts/scripts.min.js" async></script>
 
 <!-- Google Analytics -->
